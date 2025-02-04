@@ -40,8 +40,7 @@ export default function WhatWeHave() {
           <div>Vấn đề xã hội nổi bật?</div>
         </div>
       ),
-      image:
-        "https://img.freepik.com/free-photo/beautiful-roman-figure-carving_23-2149413201.jpg?t=st=1738659411~exp=1738663011~hmac=aa32eed2a67db2eba0db2438dd29c5ce73c16b5259d1bc08a5529b2470254ca6&w=1380",
+      image: "/images/home-page-banner.jpg",
     },
     {
       name: "Giải pháp",

@@ -18,9 +18,7 @@ export default function Home() {
       <div className="w-screen h-screen overflow-hidden">
         <motion.div style={{ y }} className="relative h-full">
           <img
-            src={
-              "https://img.freepik.com/free-photo/beautiful-roman-figure-carving_23-2149413180.jpg?t=st=1738637949~exp=1738641549~hmac=0da9265e8d7b8c13154fdbc91dcaa6504c77a278f56320facb90bdbccda486c8&w=1380"
-            }
+            src={"/images/home-page-banner.jpg"}
             alt="image"
             className="w-full h-full object-cover"
           />
