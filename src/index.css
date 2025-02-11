@@ -18,13 +18,14 @@
 }
 
 body {
-  overflow: hidden;
+  overflow-x: hidden;
+  /* overflow: hidden; */
 }
 
 .image-container {
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .poppins {
@@ -51,4 +52,8 @@ body {
 
 .kanit {
   font-family: "Kanit", serif;
+}
+
+.flip {
+  transform: scaleX(-1);
 }

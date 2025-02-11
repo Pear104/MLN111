@@ -7,12 +7,12 @@ import { GoDotFill } from "react-icons/go";
 
 const links = [
   { name: "Trang chủ", href: "/" },
-  { name: "Khái niệm", href: "/definition" },
-  { name: "Vấn đề xã hội", href: "/problem" },
-  { name: "Quan hệ biện chứng", href: "/relation" },
-  { name: "Giải pháp", href: "/solution" },
-  { name: "Kết nối", href: "/connect" },
-  { name: "Về chúng tôi", href: "/about" },
+  { name: "I. Khái niệm", href: "/definition" },
+  { name: "II. Vấn đề việc làm", href: "/problem" },
+  { name: "III. Quan hệ biện chứng", href: "/relation" },
+  { name: "IV. Giải pháp", href: "/solution" },
+  // { name: "Kết nối", href: "/connect" },
+  // { name: "Về dự án", href: "/about" },
 ];
 
 export default function Menu() {
@@ -59,7 +59,7 @@ const MenuItem = ({ children, to }: { children: ReactNode; to: string }) => {
           size={20}
           className="transition-all opacity-0 group-hover:opacity-100 duration-500"
         />
-        <div className="">{children}</div>
+        <div className="text-2xl">{children}</div>
       </div>
     </MagneticFrame>
   );

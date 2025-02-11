@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import Cursor from "../components/Cursor";
 import { useEffect } from "react";
 import Lenis from "lenis";
-import Footer from "../components/Footer";
+// import Footer from "../components/Footer";
 
 export default function MainLayout() {
   useEffect(() => {
@@ -23,7 +23,7 @@ export default function MainLayout() {
       <div className="space-mono">
         <Outlet />
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
