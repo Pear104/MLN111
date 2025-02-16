@@ -21,7 +21,7 @@ export default function Solution() {
             alt="image"
             className="w-full h-full object-cover bg-black/60"
           />
-          <div className="w-full h-full flex justify-center items-center absolute top-0 text-white z-10 bg-black/60">
+          <div className="w-full h-full flex justify-center items-center absolute top-0 text-zinc-200 z-10 bg-black/60 space-mono">
             <div className="absolute text-8xl text-[160px]">
               <div className="mt-10 text-[160px]">IV. Giải pháp</div>
             </div>

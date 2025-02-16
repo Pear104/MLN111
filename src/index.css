@@ -17,6 +17,16 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+@layer utilities {
+  .without-ring {
+    @apply focus-visible:outline-none;
+  }
+
+  .team-member {
+    @apply relative h-96 bg-center bg-cover flex flex-col items-center justify-center rounded-3xl bg-white/10 shadow-xl;
+  }
+}
+
 body {
   overflow-x: hidden;
   /* overflow: hidden; */
@@ -56,4 +66,9 @@ body {
 
 .flip {
   transform: scaleX(-1);
+}
+
+.team-member > div {
+  background: linear-gradient(to top, #2b2b2b, #9198e500);
+  font-size: large;
 }

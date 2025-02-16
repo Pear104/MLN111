@@ -35,7 +35,7 @@ export default function Definition() {
   return (
     <Curve>
       <div className="w-screen h-screen overflow-hidden">
-        <motion.div style={{ y }} className="relative h-full">
+        <motion.div style={{ y }} className="relative h-full space-mono">
           <img
             src={
               "https://images.pexels.com/photos/4913769/pexels-photo-4913769.jpeg?auto=compress&cs=tinysrgb&w=1200"
@@ -51,7 +51,7 @@ export default function Definition() {
         </motion.div>
       </div>
       <>
-        <div className="w-screen min-h-screen grid grid-cols-2 gap-10">
+        <div className="w-screen min-h-screen grid grid-cols-2 mb-10">
           <div className="p-10 mt-10">
             <div className="text-4xl">1. Định nghĩa</div>
             <div className="mt-10 text-xl space-y-8">
@@ -83,7 +83,7 @@ export default function Definition() {
               />
             </div>
           </div>
-          <div className="p-10 mt-10">
+          <div className="px-10 pt-10 mt-10 border-l border-black">
             <div className="text-4xl">2. Phân loại</div>
             <div className="mt-10 text-xl list-disc">
               <li>
@@ -100,7 +100,7 @@ export default function Definition() {
                 giống con người ở mức độ cao, thậm chí tự suy nghĩ và đưa ra
                 quyết định phức tạp.
               </li>
-              <div className="py-8 flex gap-20">
+              <div className="pt-8 flex gap-20">
                 <img className="h-[200px] aspect-auto" src={doraemon} alt="" />
                 <img className="w-[180px]" src={doraemi} alt="" />
                 <img className="w-[180px]" src={baymax} alt="" />

@@ -32,7 +32,7 @@ export default function Problem() {
   return (
     <Curve>
       <div className="w-screen h-screen overflow-hidden">
-        <motion.div style={{ y }} className="relative h-full">
+        <motion.div style={{ y }} className="relative h-full space-mono">
           <img
             src={
               "https://images.pexels.com/photos/313690/pexels-photo-313690.jpeg?auto=compress&cs=tinysrgb&w=1200"
@@ -40,7 +40,7 @@ export default function Problem() {
             alt="image"
             className="w-full h-full object-cover bg-black/60"
           />
-          <div className="w-full h-full flex justify-center items-center absolute top-0 text-white z-10 bg-black/60">
+          <div className="w-full h-full flex justify-center items-center absolute top-0 text-zinc-300 z-10 bg-black/80">
             <div className="absolute text-8xl text-[160px]">
               <div className="">
                 <div>II. Vấn đề</div>
@@ -61,7 +61,7 @@ export default function Problem() {
             style={{ backgroundImage: `url(${background})` }}
           >
             <div className="absolute top-0 left-0 w-full h-full bg-black/70 -z-10"></div>
-            <div className="-rotate-[10deg] -translate-y-20 space-y-10">
+            <div className="space-y-10">
               {problemItems.map((item, index) => (
                 <div
                   // onMouseEnter={() => setBackground(item.background)}
@@ -107,10 +107,16 @@ export default function Problem() {
 
 const ProblemItem = ({ title }) => {
   return (
-    <div className="text-6xl group z-20 text-zinc-200 select-none">
-      <span className="rounded-full px-8 hover:bg-zinc-500 transition-all group-hover:translate-x-20">
+    // <div className="text-6xl group z-20 text-zinc-200 select-none">
+    //   <span className="rounded-full px-8 hover:bg-zinc-500 transition-all group-hover:translate-x-20">
+    //     {title}
+    //   </span>
+    // </div>
+    <div className="uppercase transition-all py-3 px-8 group  hover:-translate-x-10 relative cursor-pointer">
+      <span className="text-5xl relative z-10 text-zinc-200 px-8">
         {title}
-      </span>
+        <span className="-z-10 w-0 h-full absolute bottom-0 left-0 group-hover:bottom-0 group-hover:h-full group-hover:w-full transition-all duration-500 rounded-3xl bg-white/40"></span>
+      </span>{" "}
     </div>
   );
 };

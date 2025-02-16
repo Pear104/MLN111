@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 import Header from "../components/Header";
-import Cursor from "../components/Cursor";
+// import Cursor from "../components/Cursor";
 import { useEffect } from "react";
 import Lenis from "lenis";
 // import Footer from "../components/Footer";
@@ -18,9 +18,9 @@ export default function MainLayout() {
 
   return (
     <>
-      <Cursor />
+      {/* <Cursor /> */}
       <Header />
-      <div className="space-mono">
+      <div className="">
         <Outlet />
       </div>
       {/* <Footer /> */}

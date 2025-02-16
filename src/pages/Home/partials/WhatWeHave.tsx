@@ -15,7 +15,7 @@ export default function WhatWeHave() {
         </div>
       ),
       image:
-        "https://img.freepik.com/free-photo/greek-statue-engraving-style_53876-126884.jpg?t=st=1738657114~exp=1738660714~hmac=124a8ea52c3a757bada58a087680764a96f2476c1ab67d90d05dd4f664f9ef4a&w=1380",
+        "https://static-cdn.toi-media.com/www/uploads/2022/12/DALL%C2%B7E-2022-12-14-00.19.28-humanoid-robot-creating-art-on-a-canvas-with-many-colors-in-art-nouveau-style-1-e1670998298608.jpeg",
     },
     {
       name: "Vấn đề việc làm",

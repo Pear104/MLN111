@@ -22,7 +22,7 @@ export default function Home() {
             alt="image"
             className="w-full h-full object-cover"
           />
-          <div className="w-full h-full absolute top-0 text-black z-20">
+          <div className="w-full h-full absolute top-0 z-20 text-zinc-200 bg-black/60">
             <div className="absolute top-56 left-10 text-8xl">
               <div className="space-mono text-[100px]">Triết học</div>
               <div className="orbitron pt-16 text-[200px]">& AI</div>
@@ -31,31 +31,11 @@ export default function Home() {
         </motion.div>
       </div>
       {/* This component make an redundant space in the x-axis that make the whole page overflow-x */}
-      <div className="w-screen h-screen overflow-hidden flex flex-col justify-center">
-        <Slide
-          direction={"left"}
-          left={"-40%"}
-          progress={scrollYProgress}
-          word={"Trí Tuệ Nhân Tạo"}
-        />
-        <Slide
-          direction={"right"}
-          left={"-60%"}
-          progress={scrollYProgress}
-          word={"Triết học Mác-Lênin"}
-        />
-        <Slide
-          direction={"left"}
-          left={"-70%"}
-          progress={scrollYProgress}
-          word={"Trí Tuệ Nhân Tạo"}
-        />
-        <Slide
-          direction={"right"}
-          left={"-30%"}
-          progress={scrollYProgress}
-          word={"Triết học Mác-Lênin"}
-        />
+      <div className="w-screen overflow-hidden flex flex-col justify-center pt-10">
+        <div className="uppercase text-center pb-10 text-3xl font-semibold">
+          thành viên
+        </div>
+        <Slide />
       </div>
       <Introduce />
       <WhatWeHave />
@@ -63,28 +43,66 @@ export default function Home() {
   );
 }
 
-const Slide = (props) => {
-  const direction = props.direction == "left" ? -1 : 1;
+const Slide = () => {
+  // const direction = props.direction == "left" ? -1 : 1;
 
-  const translateX = useTransform(
-    props.progress,
-    [0, 1],
-    [150 * direction, -150 * direction]
-  );
+  // const translateX = useTransform(
+  //   props.progress,
+  //   [0, 1],
+  //   [150 * direction, -150 * direction]
+  // );
 
   return (
     <motion.div
-      style={{ x: translateX, left: props.left }}
-      className="relative flex whitespace-nowrap items-center"
+      // style={{ x: translateX, left: props.left }}
+      className="relative"
     >
-      {Array.from({ length: 4 }, (_, i) => (
-        <>
-          <div className={"px-20 flex gap-5 items-center"} key={i + props.word}>
-            <p className="text-[7.5vw] space-mono">{props.word}</p>
+      <div className="relative grid whitespace-nowrap items-center grid-cols-4 gap-16 px-16 space-mono">
+        <div
+          className="team-member"
+          style={{
+            backgroundImage: `url("https://media.canva.com/v2/image-resize/format:JPG/height:800/quality:92/uri:s3%3A%2F%2Fmedia-private.canva.com%2FhY2JU%2FMAGbzthY2JU%2F1%2Fp.jpg/watermark:F/width:600?csig=AAAAAAAAAAAAAAAAAAAAAMccxfercf-3JMIRJ4ApjK3GxFrIi1Iad3nvidzAXhYp&exp=1739676193&osig=AAAAAAAAAAAAAAAAAAAAAJWCuzJZEtmuIgA7a3Rz9NkbBwtUAuzjS9ICOHdmzukL&signer=media-rpc&x-canva-quality=screen")`,
+          }}
+        >
+          <div className="rounded-b-3xl text-white absolute bottom-0 w-full text-center py-4 bg-linear-to-r from-cyan-500 to-blue-500">
+            <div>Nhất</div>
+            <div>Nội dung</div>
           </div>
-          <span className="text-[100px] font-bold">{"  ·  "}</span>
-        </>
-      ))}
+        </div>
+        <div
+          className="team-member"
+          style={{
+            backgroundImage: `url("https://media.canva.com/v2/image-resize/format:JPG/height:800/quality:92/uri:s3%3A%2F%2Fmedia-private.canva.com%2FBLhEc%2FMAGcaoBLhEc%2F1%2Fp.jpg/watermark:F/width:600?csig=AAAAAAAAAAAAAAAAAAAAAFFrBnu_HpNA1iIO5vVrmhUUirvI5ISuNGS6G6u8cSUr&exp=1739674650&osig=AAAAAAAAAAAAAAAAAAAAALP-vpP_PBuPKoCvWbnSQ23VUTkQ-OXHx0QT5K0no_cR&signer=media-rpc&x-canva-quality=screen")`,
+          }}
+        >
+          <div className="rounded-b-3xl text-white absolute bottom-0 w-full text-center py-4 bg-linear-to-r from-cyan-500 to-blue-500">
+            <div>Trí</div>
+            <div>Coder</div>
+          </div>
+        </div>
+        <div
+          className="team-member"
+          style={{
+            backgroundImage: `url("https://media.canva.com/v2/image-resize/format:JPG/height:200/quality:75/uri:s3%3A%2F%2Fmedia-private.canva.com%2FPTzZM%2FMAGcb-PTzZM%2F1%2Fp.jpg/watermark:F/width:193?csig=AAAAAAAAAAAAAAAAAAAAAKiVLan2Kqq97-s43mJqFMcZTx2u4UbiUIaElnJ_OGRD&exp=1739675985&osig=AAAAAAAAAAAAAAAAAAAAAKX5EzY3xHOYXwPMPF78yO4KyV_2HGqKCQFKNGgknlab&signer=media-rpc&x-canva-quality=thumbnail")`,
+          }}
+        >
+          <div className="rounded-b-3xl text-white absolute bottom-0 w-full text-center py-4 bg-linear-to-r from-cyan-500 to-blue-500">
+            <div>Đạt</div>
+            <div>Truyền thông</div>
+          </div>
+        </div>
+        <div
+          className="team-member"
+          style={{
+            backgroundImage: `url("./images/truong.jfif")`,
+          }}
+        >
+          <div className="rounded-b-3xl text-white absolute bottom-0 w-full text-center py-4 bg-linear-to-r from-cyan-500 to-blue-500">
+            <div>Trường</div>
+            <div>Coder</div>
+          </div>
+        </div>
+      </div>
     </motion.div>
   );
 };

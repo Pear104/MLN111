@@ -198,7 +198,10 @@ export const ContentTransport = () => {
         nhận diện chướng ngại vật, dự đoán hành vi của người tham gia giao
         thông, và đưa ra quyết định một cách chính xác, nhanh chóng.
       </div>
-
+      <img
+        src="https://www.motortrend.com/uploads/sites/5/2019/12/Waymo-1.jpg?w=768&width=768&q=75&format=webp"
+        alt=""
+      />
       <div className="text-4xl font-semibold">Phạt nguội</div>
       <div>
         Hệ thống quản lý giao thông thông minh tích hợp các chức năng nhận diện
@@ -271,6 +274,10 @@ export const ContentArt = () => {
         từ việc mô phỏng các phong cách cổ điển đến việc tạo ra những tác phẩm
         hoàn toàn mới mẻ
       </div>
+      <img
+        src="https://bigthink.com/wp-content/uploads/2022/09/rosenberg1.jpg"
+        alt=""
+      />
 
       <div className="text-4xl font-semibold">Điện ảnh</div>
       <div>

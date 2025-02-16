@@ -7,9 +7,9 @@ export const ContentAutomation = () => {
       .scrollIntoView({ block: "start", behavior: "smooth" });
   }, []);
   return (
-    <div className="w-full flex justify-center px-4 z-30">
+    <div className="w-full flex justify-center px-4 z-30 mb-10">
       <div id="head"></div>
-      <div className="mt-20 space-y-8">
+      <div className="mt-20 space-y-5">
         <div className="text-2xl font-semibold">
           Amazon và hệ thống kho vận tự động
         </div>
@@ -21,6 +21,10 @@ export const ContentAutomation = () => {
           vẫn tuyển dụng nhiều nhân công, nhưng phần lớn các công việc mang tính
           chất lặp lại đang dần bị thay thế bởi robot.
         </div>
+        <img
+          src="https://images.ctfassets.net/hfb264dqso7g/3hNfrOvuxJUKisJjk7B3xz/c892cb02e6f38eb8cf1374c9fdd315e1/amazon_warehouse_automation.jpeg"
+          alt=""
+        />
         <div className="text-2xl font-semibold">Ngành sản xuất ô tô</div>
         <div>
           Các nhà máy sản xuất ô tô như Ford và Tesla đã sử dụng robot và AI để
@@ -28,6 +32,13 @@ export const ContentAutomation = () => {
           giúp tăng hiệu suất, nhưng cũng làm giảm số lượng nhân công cần thiết
           trong ngành sản xuất.
         </div>
+        <a
+          className="text-blue-500 underline"
+          target="_blank"
+          href="https://vnexpress.net/amazon-dung-robot-cho-kho-hang-the-nao-4479874.html"
+        >
+          Link bài viết
+        </a>
       </div>
     </div>
   );
@@ -40,9 +51,9 @@ export const ContentSkill = () => {
       .scrollIntoView({ block: "start", behavior: "smooth" });
   }, []);
   return (
-    <div className="w-full flex justify-center px-4 z-30">
+    <div className="w-full flex justify-center px-4 z-30 mb-10">
       <div id="head"></div>
-      <div className="mt-20 space-y-8">
+      <div className="mt-20 space-y-5">
         <div className="text-2xl font-semibold">Công nghiệp tài chính</div>
         <div>
           Tại các công ty tài chính, nhiều giao dịch viên và nhà phân tích tài
@@ -52,6 +63,10 @@ export const ContentSkill = () => {
           tài chính trong vài giây, thay vì mất 360.000 giờ làm việc của con
           người mỗi năm.
         </div>
+        <img
+          src="https://intelcorp.scene7.com/is/image/intelcorp/ai-use-cases-hero-image:1920-1080?wid=576&hei=324"
+          alt=""
+        />
         <div className="text-2xl font-semibold">Ngành vận tải và xe tự lái</div>
         <div>
           Công nghệ xe tự lái như của Waymo (công ty con của Alphabet) và Tesla
@@ -60,6 +75,13 @@ export const ContentSkill = () => {
           Một nghiên cứu của Đại học Oxford ước tính rằng hàng triệu tài xế trên
           khắp thế giới có thể bị ảnh hưởng bởi sự phát triển của xe tự hành.
         </div>
+        <a
+          className="text-blue-500 underline"
+          target="_blank"
+          href="https://www.intel.vn/content/www/vn/vi/learn/ai-in-finance.html?utm_source=chatgpt.com"
+        >
+          Link bài viết
+        </a>
       </div>
     </div>
   );
@@ -72,7 +94,7 @@ export const ContentLayoff = () => {
       .scrollIntoView({ block: "start", behavior: "smooth" });
   }, []);
   return (
-    <div className="w-full flex justify-center px-4 z-30">
+    <div className="w-full flex justify-center px-4 z-30 mb-10">
       <div id="head"></div>
       <div className="mt-20 space-y-8">
         <div className="text-2xl font-semibold">Thung lũng Silicon</div>
@@ -85,6 +107,10 @@ export const ContentLayoff = () => {
           này làm gia tăng khoảng cách thu nhập giữa lao động có kỹ năng cao và
           lao động phổ thông.
         </div>
+        <img
+          src="https://imageio.forbes.com/specials-images/imageserve/667c7040f3ef28f15c1ff713/Massive-downsizing-/960x0.jpg?format=jpg&width=960"
+          alt=""
+        />
         <div className="text-2xl font-semibold"> Nghiên cứu của McKinsey</div>
         <div>
           Báo cáo của McKinsey Global Institute vào năm 2017 ước tính rằng đến
@@ -92,6 +118,13 @@ export const ContentLayoff = () => {
           làm trên toàn thế giới bị thay thế, đặc biệt là những việc làm đòi hỏi
           kỹ năng thấp.
         </div>
+        <a
+          className="text-blue-500 underline"
+          target="_blank"
+          href="https://www.mckinsey.com/~/media/mckinsey/business%20functions/mckinsey%20digital/our%20insights/driving%20impact%20at%20scale%20from%20automation%20and%20ai/driving-impact-at-scale-from-automation-and-ai.pdf?utm_source=chatgpt.com"
+        >
+          Link bài viết
+        </a>
       </div>
     </div>
   );
@@ -104,7 +137,7 @@ export const ContentNewJob = () => {
       .scrollIntoView({ block: "start", behavior: "smooth" });
   }, []);
   return (
-    <div className="w-full flex justify-center px-4 z-30">
+    <div className="w-full flex justify-center px-4 z-30 pb-10">
       <div id="head"></div>
       <div className="mt-20 space-y-8">
         <div className="text-2xl font-semibold">Ngành y tế và AI</div>
@@ -116,6 +149,10 @@ export const ContentNewJob = () => {
           nhu cầu lớn cho các chuyên gia phát triển và quản lý các hệ thống AI
           này.
         </div>
+        <img
+          src="https://riseapps.co/wp-content/uploads/2023/08/How-AI-is-Used-in-Healthcare.png"
+          alt=""
+        />
         <div className="text-2xl font-semibold">Ngành phát triển AI</div>
         <div>
           Các công việc như kỹ sư AI, chuyên gia học máy (machine learning), và
@@ -123,6 +160,13 @@ export const ContentNewJob = () => {
           năm 2020, kỹ sư AI nằm trong số những công việc có nhu cầu tăng nhanh
           nhất, với mức tăng trưởng lên tới 74% hàng năm tại Hoa Kỳ.
         </div>
+        <a
+          className="text-blue-500 underline"
+          target="_blank"
+          href="https://www.intel.vn/content/www/vn/vi/learn/ai-in-finance.html?utm_source=chatgpt.com"
+        >
+          Link bài viết
+        </a>
       </div>
     </div>
   );
@@ -147,6 +191,10 @@ export const ContentPolicy = () => {
           các quy định liên quan đến việc bảo vệ quyền lợi lao động vẫn đang
           trong quá trình hoàn thiện.
         </div>
+        <img
+          src="https://image.nhandan.vn/w800/Uploaded/2025/yrzestsfzyr/2025_02_05/aijpg-3575.jpg.webp"
+          alt=""
+        />
         <div className="text-2xl font-semibold">
           Đức và mô hình sản xuất công nghiệp 4.0
         </div>
@@ -156,6 +204,13 @@ export const ContentPolicy = () => {
           phủ Đức đã phải đưa ra các chính sách về tái đào tạo người lao động để
           giúp họ chuyển sang các công việc mới khi tự động hóa phát triển.
         </div>
+        <a
+          className="text-blue-500 underline"
+          target="_blank"
+          href="https://nhandan.vn/dao-luat-ai-cua-eu-chinh-thuc-co-hieu-luc-post858689.html"
+        >
+          Link bài viết
+        </a>
       </div>
     </div>
   );
@@ -179,7 +234,7 @@ export const ContentArt = () => {
           Amper Music là một nền tảng sử dụng AI để sáng tác nhạc.
         </div>
         <img
-          src="https://images.pexels.com/photos/7089619/pexels-photo-7089619.jpeg?auto=compress&cs=tinysrgb&w=600"
+          src="https://static-cdn.toi-media.com/www/uploads/2022/12/DALL%C2%B7E-2022-12-14-00.19.28-humanoid-robot-creating-art-on-a-canvas-with-many-colors-in-art-nouveau-style-1-e1670998298608.jpeg"
           alt=""
         />
         <div className="text-2xl font-semibold">Sáng Tác và Sản Xuất Nhạc</div>
@@ -213,6 +268,13 @@ export const ContentArt = () => {
             yêu cầu của người dùng.
           </li>
         </div>
+        <a
+          className="text-blue-500 underline"
+          target="_blank"
+          href="https://trungtamamnhacnguyenson.com/am-nhac-va-ai-kham-pha-nhung-tiem-nang-va-ung-dung-moi"
+        >
+          Link bài viết
+        </a>
       </div>
     </div>
   );
