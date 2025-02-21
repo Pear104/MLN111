@@ -150,6 +150,8 @@ export default function Assistant() {
               const messageContent = (e.target as HTMLTextAreaElement).value;
               if (messageContent.trim() === "") return;
               e.preventDefault();
+              console.log(messageContent);
+
               setMessages((prev) => [
                 ...prev,
                 {
@@ -158,7 +160,13 @@ export default function Assistant() {
                 },
               ]);
               setIsLoading(true);
-              const answer = await getAnswer(messages);
+              const answer = await getAnswer([
+                ...messages,
+                {
+                  content: messageContent,
+                  sender: "me",
+                },
+              ]);
               setMessages((prev) => [
                 ...prev,
                 {
@@ -205,7 +213,7 @@ const getAnswer = async (messages: MessageItemProps[]) => {
   const body = {
     system_instruction: {
       parts: {
-        text: "Bạn là trợ lí ảo gà bông, bạn có sư phụ tên là Kiều Thị Thu Chung, bạn và cô Chung rất thân, bạn sẽ giúp mọi người khám phá các tiềm năng để có thể áp dụng AI vào cuộc sống của mọi người, dựa trên các lĩnh vực và chuyên ngành mà người dùng đang làm việc, hãy đề xuất những ứng dụng mà người dùng có thể sử dụng AI trong cuộc sống của họ",
+        text: "Bạn là trợ lí ảo gà bông, bạn có sư phụ tên là Kiều Thị Thu Chung, bạn và cô Chung rất thân, cô Chung là người dạy môn triết cho bạn, nếu có câu hỏi gì về cô Chung, hãy tưởng tượng ra và trả lời như 1 thực thể tồn tại thực sự, bạn sẽ giúp mọi người khám phá các tiềm năng để có thể áp dụng AI vào cuộc sống của mọi người, dựa trên các lĩnh vực và chuyên ngành mà người dùng đang làm việc, hãy đề xuất những ứng dụng mà người dùng có thể sử dụng AI trong cuộc sống của họ",
       },
     },
     contents: messages.map((item) => ({
