@@ -21,6 +21,11 @@ export default function Assistant() {
         "AI thay thế hay bổ trợ con người? Những công việc nào dễ bị AI thay thế nhất? Những công việc nào sẽ phát triển mạnh nhờ AI?",
     },
     {
+      title: "Kỹ năng nào giúp lao động thích nghi với AI?",
+      question:
+        "Những kỹ năng nào AI không thể thay thế? Người lao động cần học gì để thích nghi với thời đại AI? Vai trò của giáo dục & đào tạo trong thời kỳ AI phát triển mạnh?",
+    },
+    {
       title: "AI và tái phân phối lợi ích kinh tế",
       question:
         "Doanh nghiệp hưởng lợi từ AI → Có nên đánh thuế AI để hỗ trợ người lao động mất việc không? Chính phủ cần đưa ra chính sách gì để giảm bất bình đẳng do AI gây ra? Có mô hình nào để chia sẻ giá trị thặng dư AI một cách hợp lý?",
@@ -29,16 +34,6 @@ export default function Assistant() {
       title: "AI có thể thay thế công việc sáng tạo?",
       question:
         "AI đã có thể viết báo, sáng tác nhạc, vẽ tranh… Nhưng liệu nó có thể thực sự sáng tạo không? Vai trò của con người trong các công việc sáng tạo sẽ thay đổi như thế nào? Con người cần làm gì để giữ lợi thế trước AI trong lĩnh vực sáng tạo?",
-    },
-    {
-      title: "Kỹ năng nào giúp lao động thích nghi với AI?",
-      question:
-        "Những kỹ năng nào AI không thể thay thế? Người lao động cần học gì để thích nghi với thời đại AI? Vai trò của giáo dục & đào tạo trong thời kỳ AI phát triển mạnh?",
-    },
-    {
-      title: "Chính sách kiểm soát AI và việc làm",
-      question:
-        "Các nước như EU, Mỹ, Trung Quốc đang có chính sách gì về AI và lao động? Làm thế nào để bảo vệ người lao động mà vẫn không cản trở sự phát triển của AI? Cần có quy định gì để đảm bảo AI không làm gia tăng khoảng cách giàu nghèo?",
     },
   ]);
   const [isLoading, setIsLoading] = useState(false);
@@ -73,10 +68,7 @@ export default function Assistant() {
               sender: "me",
             },
           ]);
-          // console.log(answer);
           const suggestions = await getSuggestions(answer);
-          console.log(suggestions);
-
           setMessages((prev) => [
             ...prev,
             {
@@ -84,9 +76,9 @@ export default function Assistant() {
               sender: "model",
             },
           ]);
+          setIsLoading(false);
           const a = suggestions.replaceAll("```json", "").replaceAll("```", "");
           setSuggestions(JSON.parse(a));
-          setIsLoading(false);
         }}
       >
         {data.title}
@@ -147,35 +139,44 @@ export default function Assistant() {
               return;
             }
             if (e.key === "Enter") {
-              const messageContent = (e.target as HTMLTextAreaElement).value;
-              if (messageContent.trim() === "") return;
-              e.preventDefault();
-              console.log(messageContent);
+              try {
+                const messageContent = (e.target as HTMLTextAreaElement).value;
+                if (messageContent.trim() === "") return;
+                e.preventDefault();
+                (e.target as HTMLTextAreaElement).value = "";
 
-              setMessages((prev) => [
-                ...prev,
-                {
-                  content: messageContent,
-                  sender: "me",
-                },
-              ]);
-              setIsLoading(true);
-              const answer = await getAnswer([
-                ...messages,
-                {
-                  content: messageContent,
-                  sender: "me",
-                },
-              ]);
-              setMessages((prev) => [
-                ...prev,
-                {
-                  content: answer,
-                  sender: "you",
-                },
-              ]);
-              setIsLoading(false);
-              (e.target as HTMLTextAreaElement).value = "";
+                setMessages((prev) => [
+                  ...prev,
+                  {
+                    content: messageContent,
+                    sender: "me",
+                  },
+                ]);
+                setIsLoading(true);
+
+                const answer = await getAnswer([
+                  ...messages,
+                  {
+                    content: messageContent,
+                    sender: "me",
+                  },
+                ]);
+                setMessages((prev) => [
+                  ...prev,
+                  {
+                    content: answer,
+                    sender: "model",
+                  },
+                ]);
+                setIsLoading(false);
+                const suggestions = await getSuggestions(answer);
+                const a = suggestions
+                  .replaceAll("```json", "")
+                  .replaceAll("```", "");
+                setSuggestions(JSON.parse(a));
+              } catch (error) {
+                console.log(error);
+              }
             }
           }}
         />
@@ -213,7 +214,7 @@ const getAnswer = async (messages: MessageItemProps[]) => {
   const body = {
     system_instruction: {
       parts: {
-        text: "Bạn là trợ lí ảo gà bông, bạn có sư phụ tên là Kiều Thị Thu Chung, bạn và cô Chung rất thân, cô Chung là người dạy môn triết cho bạn, nếu có câu hỏi gì về cô Chung, hãy tưởng tượng ra và trả lời như 1 thực thể tồn tại thực sự, bạn sẽ giúp mọi người khám phá các tiềm năng để có thể áp dụng AI vào cuộc sống của mọi người, dựa trên các lĩnh vực và chuyên ngành mà người dùng đang làm việc, hãy đề xuất những ứng dụng mà người dùng có thể sử dụng AI trong cuộc sống của họ",
+        text: "Bạn là trợ lí ảo gà bông, bạn có sư phụ tên là Kiều Thị Thu Chung, là 1 con người có thật, bạn và cô Chung rất thân, cô Chung là người dạy môn triết cho bạn, nếu có câu hỏi gì về cô Chung, hãy tưởng tượng ra và trả lời, bạn sẽ giúp mọi người khám phá các tiềm năng để có thể áp dụng AI vào cuộc sống của mọi người, dựa trên các lĩnh vực và chuyên ngành mà người dùng đang làm việc, hãy đề xuất những ứng dụng mà người dùng có thể sử dụng AI trong cuộc sống của họ",
       },
     },
     contents: messages.map((item) => ({
