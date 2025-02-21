@@ -51,9 +51,9 @@ export default function Definition() {
         </motion.div>
       </div>
       <>
-        <div className="w-screen min-h-screen grid grid-cols-2 mb-10">
+        <div className="w-screen grid grid-cols-2 mb-10">
           <div className="p-10 mt-10">
-            <div className="text-4xl">1. Định nghĩa</div>
+            <div className="text-4xl space-mono">1. Định nghĩa</div>
             <div className="mt-10 text-xl space-y-8">
               <li>
                 Trí tuệ nhân tạo (AI - Artificial Intelligence) là một lĩnh vực
@@ -84,35 +84,37 @@ export default function Definition() {
             </div>
           </div>
           <div className="px-10 pt-10 mt-10 border-l border-black">
-            <div className="text-4xl">2. Phân loại</div>
+            <div className="text-4xl space-mono">2. Phân loại</div>
             <div className="mt-10 text-xl list-disc">
               <li>
                 AI Hẹp (Weak AI): Chỉ có thể thực hiện một nhiệm vụ cụ thể, ví
                 dụ như ChatGPT, trợ lý ảo Siri, Google Assistant.
               </li>
               <div className="py-8 flex gap-20">
-                <img className="w-[140px]" src={gpt} alt="" />
-                <img className="w-[140px]" src={siri} alt="" />
-                <img className="w-[140px]" src={googleAssitant} alt="" />
+                <img className="h-[120px]" src={gpt} alt="" />
+                <img className="h-[120px]" src={siri} alt="" />
+                <img className="h-[120px]" src={googleAssitant} alt="" />
               </div>
               <li>
                 AI Mạnh (Strong AI): Có khả năng hiểu, học hỏi và hoạt động
                 giống con người ở mức độ cao, thậm chí tự suy nghĩ và đưa ra
                 quyết định phức tạp.
               </li>
-              <div className="pt-8 flex gap-20">
-                <img className="h-[200px] aspect-auto" src={doraemon} alt="" />
-                <img className="w-[180px]" src={doraemi} alt="" />
-                <img className="w-[180px]" src={baymax} alt="" />
+              <div className="pt-8 flex gap-10">
+                <img className="h-[180px] aspect-auto" src={doraemon} alt="" />
+                <img className="h-[180px]" src={doraemi} alt="" />
+                <img className="h-[180px]" src={baymax} alt="" />
               </div>
             </div>
           </div>
         </div>
         <div className="w-screen min-h-screen bg-black/10">
-          <div className="text-5xl text-center pt-16">3. Ứng dụng</div>
+          <div className="text-5xl text-center pt-16 space-mono">
+            3. Ứng dụng
+          </div>
           <div className="mt-8 w-screen min-h-screen grid grid-cols-3 gap-10">
             <div className="px-10">
-              <div className="sticky top-10 flex flex-col justify-center mt-8 gap-8">
+              <div className="sticky top-20 flex flex-col justify-center mt-8 gap-8">
                 {aspectItems.map((item, index) => (
                   <div
                     onMouseEnter={() =>

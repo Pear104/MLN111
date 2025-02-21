@@ -106,7 +106,7 @@ const ProblemItem = ({ title }) => {
     //   </span>
     // </div>
     <div className="uppercase transition-all py-3 px-8 group  hover:-translate-x-10 relative cursor-pointer">
-      <span className="text-4xl relative z-10 text-zinc-200 px-8">
+      <span className="text-4xl relative z-10 text-zinc-200 px-4 py-2">
         {title}
         <span className="-z-10 w-0 h-full absolute bottom-0 left-0 group-hover:bottom-0 group-hover:h-full group-hover:w-full transition-all duration-500 rounded-3xl bg-white/40"></span>
       </span>{" "}
