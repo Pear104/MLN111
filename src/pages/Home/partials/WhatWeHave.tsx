@@ -8,10 +8,10 @@ export default function WhatWeHave() {
       name: "Khái niệm",
       href: "/definition",
       description: (
-        <div className="flex flex-col text-3xl gap-20 justify-center">
-          <li>Triết học là gì?</li>
-          <li>Lịch sử ra đời của Triết học?</li>
+        <div className="flex flex-col text-xl gap-10 justify-center space-mono">
           <li>Trí tuệ nhân tạo là gì?</li>
+          <li>Phân loại AI?</li>
+          <li>Ứng dụng trong từng lĩnh vực?</li>
         </div>
       ),
       image:
@@ -21,22 +21,24 @@ export default function WhatWeHave() {
       name: "Vấn đề việc làm",
       href: "/problem",
       description: (
-        <div className="flex flex-col text-3xl gap-20 justify-center">
-          <li>AI của hiện tại?</li>
-          <li>Vấn đề việc làm nổi cộm?</li>
+        <div className="flex flex-col text-xl gap-10 justify-center space-mono">
+          <li>Thực trạng hiện tại?</li>
+          <li>Tự động hóa?</li>
+          <li>Chuyển dịch nhu cầu?</li>
+          <li>Những vấn đề nổi cộm?</li>
         </div>
       ),
       image:
         "https://images.pexels.com/photos/5669619/pexels-photo-5669619.jpeg?auto=compress&cs=tinysrgb&w=600",
     },
     {
-      name: "Mối quan hệ biện chứng",
+      name: "Quan hệ biện chứng",
       href: "/relation",
       description: (
-        <div className="flex flex-col text-3xl gap-20 justify-center">
-          <li>Triết học của hiện tại?</li>
-          <li>AI của hiện tại?</li>
-          <li>Vấn đề xã hội nổi bật?</li>
+        <div className="flex flex-col text-xl gap-20 justify-center space-mono">
+          <li>Quan hệ biện chứng?</li>
+          <li>Nguyên lý mâu thuẫn và phát triển?</li>
+          <li>Sự phát triển mới?</li>
         </div>
       ),
       image: "/images/home-page-banner.jpg",
@@ -108,7 +110,7 @@ export default function WhatWeHave() {
           }}
         ></div>
         <div className="col-span-1">
-          <div className="uppercase text-8xl mb-20 space-mono">
+          <div className="uppercase text-4xl mb-20 space-mono font-semibold">
             Dự án này có?
           </div>
           <div className="text-3xl space-y-4 kanit font-[300]">
@@ -138,7 +140,9 @@ export default function WhatWeHave() {
 const NavItem = ({ name, image }) => {
   return (
     <div className="uppercase transition-all py-4 px-8 group relative hover:translate-x-6 cursor-pointer">
-      <div className="relative z-20 group-hover:text-zinc-200">{name}</div>{" "}
+      <div className="relative z-20 group-hover:text-zinc-200 text-2xl">
+        {name}
+      </div>{" "}
       {/* Ensure text is on top */}
       <div
         className="z-0 w-0 h-full absolute bottom-0 left-0 group-hover:bottom-0 group-hover:h-full group-hover:w-full transition-all duration-500 rounded-3xl bg-cover bg-no-repeat"

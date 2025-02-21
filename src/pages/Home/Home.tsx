@@ -38,6 +38,7 @@ export default function Home() {
         <Slide />
       </div>
       <Introduce />
+      <div className="w-[500px] h-0.5 bg-black text-black mx-20" />
       <WhatWeHave />
     </Curve>
   );
@@ -61,7 +62,7 @@ const Slide = () => {
         <div
           className="team-member"
           style={{
-            backgroundImage: `url("https://media.canva.com/v2/image-resize/format:JPG/height:800/quality:92/uri:s3%3A%2F%2Fmedia-private.canva.com%2FhY2JU%2FMAGbzthY2JU%2F1%2Fp.jpg/watermark:F/width:600?csig=AAAAAAAAAAAAAAAAAAAAAMccxfercf-3JMIRJ4ApjK3GxFrIi1Iad3nvidzAXhYp&exp=1739676193&osig=AAAAAAAAAAAAAAAAAAAAAJWCuzJZEtmuIgA7a3Rz9NkbBwtUAuzjS9ICOHdmzukL&signer=media-rpc&x-canva-quality=screen")`,
+            backgroundImage: `url("./images/nhat.jpg")`,
           }}
         >
           <div className="rounded-b-3xl text-white absolute bottom-0 w-full text-center py-4 bg-linear-to-r from-cyan-500 to-blue-500">
@@ -72,7 +73,7 @@ const Slide = () => {
         <div
           className="team-member"
           style={{
-            backgroundImage: `url("https://media.canva.com/v2/image-resize/format:JPG/height:800/quality:92/uri:s3%3A%2F%2Fmedia-private.canva.com%2FBLhEc%2FMAGcaoBLhEc%2F1%2Fp.jpg/watermark:F/width:600?csig=AAAAAAAAAAAAAAAAAAAAAFFrBnu_HpNA1iIO5vVrmhUUirvI5ISuNGS6G6u8cSUr&exp=1739674650&osig=AAAAAAAAAAAAAAAAAAAAALP-vpP_PBuPKoCvWbnSQ23VUTkQ-OXHx0QT5K0no_cR&signer=media-rpc&x-canva-quality=screen")`,
+            backgroundImage: `url("./images/tri.webp")`,
           }}
         >
           <div className="rounded-b-3xl text-white absolute bottom-0 w-full text-center py-4 bg-linear-to-r from-cyan-500 to-blue-500">
@@ -83,7 +84,7 @@ const Slide = () => {
         <div
           className="team-member"
           style={{
-            backgroundImage: `url("https://media.canva.com/v2/image-resize/format:JPG/height:200/quality:75/uri:s3%3A%2F%2Fmedia-private.canva.com%2FPTzZM%2FMAGcb-PTzZM%2F1%2Fp.jpg/watermark:F/width:193?csig=AAAAAAAAAAAAAAAAAAAAAKiVLan2Kqq97-s43mJqFMcZTx2u4UbiUIaElnJ_OGRD&exp=1739675985&osig=AAAAAAAAAAAAAAAAAAAAAKX5EzY3xHOYXwPMPF78yO4KyV_2HGqKCQFKNGgknlab&signer=media-rpc&x-canva-quality=thumbnail")`,
+            backgroundImage: `url("./images/dat.jpg")`,
           }}
         >
           <div className="rounded-b-3xl text-white absolute bottom-0 w-full text-center py-4 bg-linear-to-r from-cyan-500 to-blue-500">

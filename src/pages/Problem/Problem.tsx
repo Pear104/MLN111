@@ -61,7 +61,7 @@ export default function Problem() {
             style={{ backgroundImage: `url(${background})` }}
           >
             <div className="absolute top-0 left-0 w-full h-full bg-black/70 -z-10"></div>
-            <div className="space-y-10">
+            <div className="space-y-4">
               {problemItems.map((item, index) => (
                 <div
                   // onMouseEnter={() => setBackground(item.background)}
@@ -90,13 +90,6 @@ export default function Problem() {
             exit={{ opacity: 0 }}
             transition={{ duration: 1 }}
           >
-            <motion.div
-              className="absolute top-4 left-4 py-1 px-4 border rounded-full border-black z-20 bg-white cursor-pointer inline-block"
-              whileHover={{ scale: 1.1 }}
-              onClick={() => setIsOpen(!isOpen)}
-            >
-              Ẩn
-            </motion.div>
             {content.description}
           </motion.div>
         </div>
@@ -113,7 +106,7 @@ const ProblemItem = ({ title }) => {
     //   </span>
     // </div>
     <div className="uppercase transition-all py-3 px-8 group  hover:-translate-x-10 relative cursor-pointer">
-      <span className="text-5xl relative z-10 text-zinc-200 px-8">
+      <span className="text-4xl relative z-10 text-zinc-200 px-8">
         {title}
         <span className="-z-10 w-0 h-full absolute bottom-0 left-0 group-hover:bottom-0 group-hover:h-full group-hover:w-full transition-all duration-500 rounded-3xl bg-white/40"></span>
       </span>{" "}
@@ -124,38 +117,32 @@ const ProblemItem = ({ title }) => {
 const problemItems = [
   {
     title: "Tự động hóa",
-    background:
-      "https://images.pexels.com/photos/159298/gears-cogs-machine-machinery-159298.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    background: "./images/gears-cogs-machine-machinery-159298.jpg",
     content: <ContentAutomation />,
   },
   {
     title: "Chuyển dịch nhu cầu",
-    background:
-      "https://images.pexels.com/photos/106155/germany-duisburg-tiger-turtle-106155.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    background: "./images/germany-duisburg-tiger-turtle-106155.jpg",
     content: <ContentSkill />,
   },
   {
     title: "Gia tăng bất bình đẳng",
-    background:
-      "https://images.pexels.com/photos/9830808/pexels-photo-9830808.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    background: "./images/pexels-photo-9830808.webp",
     content: <ContentLayoff />,
   },
   {
     title: "Công việc mới",
-    background:
-      "https://images.pexels.com/photos/327540/pexels-photo-327540.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    background: "./images/pexels-photo-327540.webp",
     content: <ContentNewJob />,
   },
   {
     title: "Bất định trong pháp lý",
-    background:
-      "https://images.pexels.com/photos/5668473/pexels-photo-5668473.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    background: "./images/pexels-photo-5668473.webp",
     content: <ContentPolicy />,
   },
   {
     title: "Khả năng sáng tạo",
-    background:
-      "https://images.pexels.com/photos/102127/pexels-photo-102127.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    background: "./images/pexels-photo-102127.webp",
     content: <ContentArt />,
   },
 ];

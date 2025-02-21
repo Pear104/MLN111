@@ -10,6 +10,7 @@ const links = [
   { name: "Vấn đề việc làm", href: "/problem" },
   { name: "Quan hệ biện chứng", href: "/relation" },
   { name: "Giải pháp", href: "/solution" },
+  { name: "Trợ lí ảo", href: "/assistant" },
   // { name: "Kết nối", href: "/connect" },
   // { name: "Về dự án", href: "/about" },
 ];
@@ -48,6 +49,14 @@ export default function Header() {
             <div className="mt-1 h-0.5 w-0 group-hover:w-full bg-white transition-all duration-300"></div>
           </Link>
         ))}
+        <a
+          target="_blank"
+          href="https://forms.gle/rGVA5KZQfkgrNWSJ7"
+          className="group"
+        >
+          Góp ý
+          <div className="mt-1 h-0.5 w-0 group-hover:w-full bg-white transition-all duration-300"></div>
+        </a>
       </div>
       {/* <motion.div
         className="p-8 border rounded-full border-black z-50 bg-white cursor-pointer"

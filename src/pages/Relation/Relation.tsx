@@ -108,7 +108,7 @@ export default function Relation() {
           }}
         ></div>
       </div>
-      <div className="w-screen min-h-screen overflow-hidden grid grid-cols-3">
+      {/* <div className="w-screen min-h-screen overflow-hidden grid grid-cols-3">
         <div
           className="bg-no-repeat bg-cover bg-left rounded-r-full"
           style={{
@@ -146,11 +146,17 @@ export default function Relation() {
             </li>
           </div>
         </div>
-      </div>
+      </div> */}
       <div className="w-screen min-h-screen overflow-hidden grid grid-cols-3 mt-10">
+        <div
+          className="bg-no-repeat bg-cover bg-left rounded-tr-[200px]"
+          style={{
+            backgroundImage: `url("https://images.pexels.com/photos/599982/pexels-photo-599982.jpeg?auto=compress&cs=tinysrgb&w=1200")`,
+          }}
+        ></div>
         <div className="col-span-2 text-xl space-y-10 mt-20 px-20">
           <div className="text-4xl font-semibold">
-            4. Sự phát triển của các hình thức lao động mới
+            3. Sự phát triển của các hình thức lao động mới
           </div>
           <div>
             <div className="font-semibold">Tích cực của sự phát triển</div>
@@ -178,12 +184,6 @@ export default function Relation() {
             </li>
           </div>
         </div>
-        <div
-          className="bg-no-repeat bg-cover bg-left rounded-tl-[200px]"
-          style={{
-            backgroundImage: `url("https://images.pexels.com/photos/599982/pexels-photo-599982.jpeg?auto=compress&cs=tinysrgb&w=1200")`,
-          }}
-        ></div>
       </div>
     </Curve>
   );

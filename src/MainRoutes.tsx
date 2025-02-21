@@ -9,6 +9,7 @@ import Problem from "./pages/Problem/Problem";
 import Relation from "./pages/Relation/Relation";
 import Connect from "./pages/Connect/Connect";
 import Solution from "./pages/Solution/Solution";
+import Assistant from "./pages/Assistant/Assistant";
 
 export default function MainRoutes() {
   const location = useLocation();
@@ -22,6 +23,7 @@ export default function MainRoutes() {
           <Route path="relation" element={<Relation />} />
           <Route path="solution" element={<Solution />} />
           <Route path="connect" element={<Connect />} />
+          <Route path="assistant" element={<Assistant />} />
           <Route path="about" element={<About />} />
           <Route path="*" element={<Page404 />} />
         </Route>

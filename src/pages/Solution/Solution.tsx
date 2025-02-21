@@ -28,7 +28,7 @@ export default function Solution() {
           </div>
         </motion.div>
       </div>
-      <div className="w-screen min-h-screen overflow-hidden">
+      <div className="w-screen pb-20 overflow-hidden">
         <div></div>
         <div className="grid grid-cols-3">
           <div className="col-span-2 text-2xl space-y-10 mt-20 px-20">
@@ -103,7 +103,7 @@ export default function Solution() {
           </div>
         </div>
       </div>
-      <div className="w-screen min-h-screen overflow-hidden grid grid-cols-3">
+      {/* <div className="w-screen min-h-screen overflow-hidden grid grid-cols-3">
         <div className="col-span-2 text-2xl space-y-10 mt-20 px-20">
           <div className="text-3xl font-semibold">
             3. Cải cách quy luật giá trị thặng dư và phân phối lại lợi nhuận
@@ -136,17 +136,11 @@ export default function Solution() {
             backgroundImage: `url("https://images.pexels.com/photos/163726/belgium-antwerp-shipping-container-163726.jpeg?auto=compress&cs=tinysrgb&w=1200")`,
           }}
         ></div>
-      </div>
-      <div className="w-screen h-screen overflow-hidden grid grid-cols-3">
-        <div
-          className="bg-no-repeat bg-cover bg-left rounded-tr-[200px]"
-          style={{
-            backgroundImage: `url("https://images.pexels.com/photos/171198/pexels-photo-171198.jpeg?auto=compress&cs=tinysrgb&w=1200")`,
-          }}
-        ></div>
-        <div className="col-span-2 text-2xl space-y-10 mt-20 px-20">
+      </div> */}
+      <div className="w-screen min-h-screen overflow-hidden grid grid-cols-3">
+        <div className="col-span-2 text-2xl space-y-10 mt-20 px-20 pb-10">
           <div className="text-3xl font-semibold">
-            4. Phát triển các hình thức lao động mới và đổi mới sáng tạo
+            3. Phát triển các hình thức lao động mới và đổi mới sáng tạo
           </div>
           <div className="space-y-4">
             <div className="font-semibold">Giải pháp:</div>
@@ -168,6 +162,12 @@ export default function Solution() {
             <li>Sự phát triển bền vững và sáng tạo của nền kinh tế.</li>
           </div>
         </div>
+        <div
+          className="bg-no-repeat bg-cover bg-left rounded-tl-[200px]"
+          style={{
+            backgroundImage: `url("https://images.pexels.com/photos/171198/pexels-photo-171198.jpeg?auto=compress&cs=tinysrgb&w=1200")`,
+          }}
+        ></div>
       </div>
     </Curve>
   );

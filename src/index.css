@@ -72,3 +72,36 @@ body {
   background: linear-gradient(to top, #2b2b2b, #9198e500);
   font-size: large;
 }
+
+.no-scrollbar::-webkit-scrollbar {
+  width: 0px;
+}
+
+.small-scrollbar::-webkit-scrollbar {
+  width: 4px;
+  height: 10px;
+}
+
+.small-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 10px;
+}
+
+.small-scrollbar::-webkit-scrollbar-thumb {
+  background: #8f8d8d5e;
+  border-radius: 20px;
+}
+
+.small-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #695e5ead;
+}
+
+.message-p p p,
+.message-p p ul {
+  padding: 10px 0px;
+}
+
+.message-p li {
+  margin-left: 20px;
+  list-style-type: disc;
+}
