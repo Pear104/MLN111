@@ -47,7 +47,7 @@ export default function WhatWeHave() {
       name: "Giải pháp",
       href: "/solution",
       description: (
-        <div className="flex flex-col text-3xl gap-20 justify-center">
+        <div className="flex flex-col text-xl gap-10 justify-center space-mono">
           <li>Giải pháp đưa ra?</li>
           <li>Tính thực tiễn?</li>
           <li>Tính hiệu quả?</li>
