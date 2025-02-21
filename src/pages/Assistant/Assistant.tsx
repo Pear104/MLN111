@@ -16,36 +16,29 @@ export default function Assistant() {
   const [messages, setMessages] = useState<MessageItemProps[]>([]);
   const [suggestions, setSuggestions] = useState<SuggestionItemProps[]>([
     {
-      title: "Marketing",
-      question: "Mình đang học Marketing, bạn có đề xuất gì cho mình không?",
-    },
-    {
-      title: "Kinh tế",
-      question: "Mình đang học kinh tế, bạn có đề xuất gì cho mình không?",
-    },
-    {
-      title: "Truyền thông",
+      title: "AI: Thay thế hay hỗ trợ việc làm?",
       question:
-        "Mình đang học Truyền thông đa phương tiện, bạn có đề xuất gì cho mình không?",
+        "AI thay thế hay bổ trợ con người? Những công việc nào dễ bị AI thay thế nhất? Những công việc nào sẽ phát triển mạnh nhờ AI?",
     },
     {
-      title: "Kỹ thuật",
+      title: "AI và tái phân phối lợi ích kinh tế",
       question:
-        "Mình đang học Kỹ thuật phần mềm, bạn có đề xuất gì cho mình không?",
+        "Doanh nghiệp hưởng lợi từ AI → Có nên đánh thuế AI để hỗ trợ người lao động mất việc không? Chính phủ cần đưa ra chính sách gì để giảm bất bình đẳng do AI gây ra? Có mô hình nào để chia sẻ giá trị thặng dư AI một cách hợp lý?",
     },
     {
-      title: "Thiết Kế Đồ Họa",
+      title: "AI có thể thay thế công việc sáng tạo?",
       question:
-        "Mình đang học về Thiết Kế Đồ Họa, bạn có đề xuất gì cho mình không?",
+        "AI đã có thể viết báo, sáng tác nhạc, vẽ tranh… Nhưng liệu nó có thể thực sự sáng tạo không? Vai trò của con người trong các công việc sáng tạo sẽ thay đổi như thế nào? Con người cần làm gì để giữ lợi thế trước AI trong lĩnh vực sáng tạo?",
     },
     {
-      title: "Triết học",
+      title: "Kỹ năng nào giúp lao động thích nghi với AI?",
       question:
-        "Mình đang học Triết học, mình cần tìm 1 sư phụ, bạn có đề xuất gì cho mình trong lĩnh vực này không?",
+        "Những kỹ năng nào AI không thể thay thế? Người lao động cần học gì để thích nghi với thời đại AI? Vai trò của giáo dục & đào tạo trong thời kỳ AI phát triển mạnh?",
     },
     {
-      title: "Y học",
-      question: "Mình đang học Y, bạn có đề xuất gì cho mình không?",
+      title: "Chính sách kiểm soát AI và việc làm",
+      question:
+        "Các nước như EU, Mỹ, Trung Quốc đang có chính sách gì về AI và lao động? Làm thế nào để bảo vệ người lao động mà vẫn không cản trở sự phát triển của AI? Cần có quy định gì để đảm bảo AI không làm gia tăng khoảng cách giàu nghèo?",
     },
   ]);
   const [isLoading, setIsLoading] = useState(false);
@@ -114,8 +107,7 @@ export default function Assistant() {
             <div className="text-xl font-bold">Trợ lí Gà Bông 🐥</div>
             <div className="">
               Chào bạn, mình là gà bông - bạn đồng hành giúp bạn mang AI vào
-              đời. Mình có thể cố vấn cho bạn 1 vài mẹo sử dụng AI dựa trên
-              chuyên ngành làm việc của bạn
+              đời.
             </div>
           </div>
         </div>
